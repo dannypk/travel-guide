@@ -4,6 +4,9 @@
   "description": "help you plan your trips",
   "main": "index.js",
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,12 +25,16 @@
   },
   "homepage": "https://github.com/dannypk/travel-guide#readme",
   "dependencies": {
-    "less": "3.10.3",
+    "@zeit/next-less": "^1.0.1",
+    "http": "0.0.0",
+    "less": "^3.10.3",
     "mobx": "5.15.0",
     "mobx-react": "6.1.4",
-    "nextjs": "0.0.3",
-    "proptypes": "1.1.0",
+    "next": "9.1.4",
+    "path": "0.12.7",
+    "prop-types": "15.7.2",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react-dom": "16.12.0",
+    "url": "0.11.0"
   }
 }
