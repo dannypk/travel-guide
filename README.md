@@ -1,3 +1,13 @@
-# Travel-guide
+# Travel Guide
 
-- the intent of this project is to have a web application where you can find help in creating and managing your trips
+Do you need to travel somewhere soon? Then use another website. 
+This one is not yet ready. Thanks!
+
+
+This project shows some usages of
+* [NextJS](https://medium.com/@daniel.pacurici/next-vs-nuxt-87aa957d5967)
+* ReactJS (including react hooks)
+* MobX (for state management)
+* LESS
+* [Own eslint configuration](https://github.com/dannypk/eslint-easy-configuration)
+* Husky
