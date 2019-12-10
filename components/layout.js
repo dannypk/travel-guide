@@ -30,7 +30,7 @@ class Layout extends React.Component {
       });
       
       return (
-        <div className={menuItemClassName}>{page}</div>
+        <div className={menuItemClassName} key={page}>{page}</div>
       );
     });
   }
@@ -42,7 +42,7 @@ class Layout extends React.Component {
           <title>{this.props.title}</title>
         </Head>
         <div className="Layout-header">
-          <img className="Background-rotation" src="/static/travel.jpg" alt="travel_bkgr"/>
+          <img className="Layout-headerBackground" src="/static/travel.jpg" alt="travel_bkgr"/>
           
           <div className="Layout-logoAndMenu">
             <div>
