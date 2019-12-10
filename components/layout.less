@@ -1,17 +1,10 @@
-body {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  height: 100%;
-}
+@import '../styles/colors';
+@import '../styles/main';
 
 .Layout-header {
-  height: 50px;
   margin: 0 auto;
-
-  padding: 20px;
+  padding: 0 20px 20px;
   margin-bottom: 25px;
-  border: 1px solid darkcyan;
 }
 
 .Layout-footer {
@@ -20,4 +13,56 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.Layout-logo {
+  background-color: white;
+}
+
+.Layout-header {
+  height: 500px;
+}
+
+.Layout-menu {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  padding: 10px;
+
+  :hover {
+    cursor: pointer;
+    background-color: @menu-hover;
+  }
+}
+
+.Layout-menuItem {
+  color: white;
+  padding: 10px;
+  height: 40px;
+  border-radius: 10px;
+
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  display: flex;
+
+  &.is-active {
+    background-color: @menu-active;
+  }
+}
+
+.Layout-logoAndMenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Layout-search {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
 }

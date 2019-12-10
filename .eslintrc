@@ -1,0 +1,12 @@
+{
+  "extends": ["easy-configuration"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "jsx-a11y/label-has-for": 0
+  },
+  "plugins": [
+    "json-light"
+  ]
+}

@@ -1,15 +1,15 @@
-import "./index.less"
 import React from 'react';
-import Layout from '../components/layout';
 
-class Home extends React.Component {
+class IndexPage extends React.Component {
+  
+  componentDidMount() {
+    window.location = '/destination';
+  }
+  
   render() {
-    return (
-      <Layout>
-        <div className="example">Welcome to your travel guide !!</div>
-      </Layout>
-    );
+    return null;
   }
 }
 
-export default Home
+export default IndexPage;
+
