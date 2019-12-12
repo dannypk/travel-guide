@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "travel-guide",
+  "env": "local",
+  "services": {
+    "travelGuideService": "http://localhost:15700/travel-guide-service"
+  },
+  "logging": {
+    "level": "info",
+    "filename": "./log/log.json"
+  }
+}
