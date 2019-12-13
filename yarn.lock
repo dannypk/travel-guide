@@ -2903,10 +2903,10 @@ eslint-config-airbnb@17.1.1:
     object.assign "^4.1.0"
     object.entries "^1.1.0"
 
-eslint-config-easy-configuration@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-easy-configuration/-/eslint-config-easy-configuration-1.0.0.tgz#aa00ddc74b70139f769e93fe2e3626595a766cad"
-  integrity sha512-I5hPgJw3UNJxVB0Fsrw363vPTKykocYlKujBO6U52JUMniGlwC8ORT8IWHpXHftis+wDp4PLpoJlRlbdaAmJEQ==
+eslint-config-easy-configuration@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-easy-configuration/-/eslint-config-easy-configuration-1.1.0.tgz#f3c41662b5335031e949733082e561f73957f34d"
+  integrity sha512-EI7xioaMkQAOXrYRRipbaiMICpjl52kDLJyfO1jfol3ICKWXs/MmtdmQWPp0N0EMJYKHfODLZiaLStjlR2Ry1w==
   dependencies:
     babel-eslint "10.0.2"
     eslint "6.1.0"
