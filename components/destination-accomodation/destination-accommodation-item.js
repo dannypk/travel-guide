@@ -17,7 +17,9 @@ class DestinationAccommodationItem extends React.Component {
     
     return (
       <div className="DestinationAccommodationItem-descriptionContainer">
-        <label className="DestinationAccommodationItem-descriptionLabel">House Rules:</label>
+        <label className="DestinationAccommodationItem-descriptionLabel
+                          DestinationAccommodationItem-descriptionLabel--withoutWidth">House Rules:
+        </label>
         <span className="DestinationAccommodationItem-descriptionText">
           {houseRules}
         </span>
@@ -33,6 +35,48 @@ class DestinationAccommodationItem extends React.Component {
         <span className="DestinationAccommodationItem-descriptionText">
           {destinationAccommodation.property_type} - {destinationAccommodation.room_type}
         </span>
+      </div>
+    );
+  }
+  
+  renderPropertyPrice() {
+    const { destinationAccommodation } = this.props;
+    return (
+      <div className="DestinationAccommodationItem-descriptionContainer">
+        <label className="DestinationAccommodationItem-descriptionLabel">Price:</label>
+        <span className="DestinationAccommodationItem-descriptionText">
+          {destinationAccommodation.price} €
+        </span>
+      </div>
+    );
+  }
+  
+  renderNumberOfPeopleAllowed() {
+    const { destinationAccommodation } = this.props;
+    return (
+      <div className="DestinationAccommodationItem-descriptionContainer">
+        <label className="DestinationAccommodationItem-descriptionLabel">Available for:</label>
+        <span className="DestinationAccommodationItem-descriptionText">
+          {destinationAccommodation.accommodates} people
+        </span>
+      </div>
+    );
+  }
+  
+  renderReviewsScore() {
+    // eslint-disable-next-line camelcase
+    const { destinationAccommodation: { review_scores, reviews } } = this.props;
+    return (
+      <div className="DestinationAccommodationItem-descriptionContainer">
+        <label className="DestinationAccommodationItem-descriptionLabel">Rating:</label>
+        <span className="DestinationAccommodationItem-descriptionText">
+          {review_scores.review_scores_rating} from {reviews.length} {reviews.length > 1 ? 'reviews' : 'review'}
+        </span>
+        
+        {reviews.length > 10 &&
+        <div className="DestinationAccommodationItem-recommendedBadge" title="Based on number of reviews">
+          Recommended!
+        </div>}
       </div>
     );
   }
@@ -59,7 +103,12 @@ class DestinationAccommodationItem extends React.Component {
       <div className="DestinationAccommodationItem" onClick={() => this.onDestinationAccommodationItemClick()}>
         <div className="DestinationAccommodationItem-description">
           {this.renderImagePreview()}
-          {this.renderPropertyType()}
+          <div>
+            {this.renderPropertyType()}
+            {this.renderPropertyPrice()}
+            {this.renderNumberOfPeopleAllowed()}
+            {this.renderReviewsScore()}
+          </div>
         </div>
         
         {this.renderHouseRules()}

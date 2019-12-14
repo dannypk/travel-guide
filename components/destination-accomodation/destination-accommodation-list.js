@@ -16,8 +16,12 @@ class DestinationAccommodationList extends React.Component {
       return <Spinner/>;
     }
     
+    if (!destinationStore.availableAccommodations) {
+      return 'In order to get results, please search for your destination!';
+    }
+    
     if (destinationStore.availableAccommodations.length === 0) {
-      return null;
+      return 'For the given destination, no accommodations were found. We apologize for the inconvenience!';
     }
     
     return (

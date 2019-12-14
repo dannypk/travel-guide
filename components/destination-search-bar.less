@@ -1,7 +1,12 @@
 @import '../styles/colors';
 
+.DestinationSearchBar {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
 .DestinationSearchBar-input {
-  width: 800px;
   padding: 10px 20px;
   background-color: @destination-input;
   box-shadow: 1px 1px 20px 5px rgba(126, 126, 126, 1);
@@ -9,5 +14,19 @@
   color: white;
   border-radius: 20px;
   outline: none;
+  width: 600px;
   font-size: 20px;
+}
+
+.DestinationSearchBar-wrapper {
+  position: relative;
+}
+
+.DestinationSearchBar-searchIcon {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 15px;
+  top:2px;
+  fill: @destination-search;
 }

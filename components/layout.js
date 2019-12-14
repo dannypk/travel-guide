@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'next/router';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
@@ -16,11 +17,13 @@ import './layout.less';
 class Layout extends React.Component {
   static propTypes = {
     title: PropTypes.string,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
+    displayLayoutSearch: PropTypes.bool
   };
   
   static defaultProps = {
-    title: 'Travel Guide'
+    title: 'Travel Guide',
+    displayLayoutSearch: true
   };
   
   renderMenu() {
@@ -30,18 +33,28 @@ class Layout extends React.Component {
       });
       
       return (
-        <div className={menuItemClassName} key={page}>{page}</div>
+        <div className={menuItemClassName} key={page}
+             onClick={() => {
+               layoutStore.currentPage = page;
+               Router.push(`/${page.toLowerCase()}`);
+             }}>
+          {page}
+        </div>
       );
     });
   }
   
   render() {
+    const layoutHeaderClassName = classnames('Layout-header', {
+      'Layout-header--noSearchBar': !this.props.displayLayoutSearch
+    });
+    
     return (
       <div>
         <Head>
           <title>{this.props.title}</title>
         </Head>
-        <div className="Layout-header">
+        <div className={layoutHeaderClassName}>
           <img className="Layout-headerBackground" src="/static/travel.jpg" alt="travel_bkgr"/>
           
           <div className="Layout-logoAndMenu">
@@ -54,15 +67,17 @@ class Layout extends React.Component {
             </div>
           </div>
           
+          {this.props.displayLayoutSearch &&
           <div className="Layout-search">
             <p>We help you find your next destination</p>
             <DestinationSearchBar/>
           </div>
+          }
         </div>
         
         {this.props.children}
         
-        <div className="Layout-footer" />
+        <div className="Layout-footer"/>
       </div>
     );
   }
