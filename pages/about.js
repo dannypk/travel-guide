@@ -33,18 +33,19 @@ class AboutPage extends React.Component {
               <div className="AboutPage-detailedDescription">
                 <div className="AboutPage-headline">Hi there and welcome to my page. My name is Daniel Pacurici and I am
                   a Full Stack Software Developer with over 7 years of experience, specialized in JavaScript development
-                  (ReactJS, NodeJS), previously working with .Net Framework (C#, WPF)
+                  (ReactJS, NodeJS), previously working with .Net Framework (C#, WPF).
                 </div>
                 
                 <div className="AboutPage-headline">
-                  As a Full Stack Developer, my work consisted in creating both front end and back end but also
-                  configuring and taking care of infrastructural part.
-                  I had the opportunity to work with Docker containers, Amazon services, Heroku, Monitoring tools
-                  (ELK, Kibana, Grafana, Prometheus)
+                  As a Full Stack Developer, my work consists in creating both front-ends and back-ends but also
+                  in configuring and taking care of infrastructural part.
+                  In these years, I had the opportunity to work with Docker containers, Amazon services, Heroku,
+                  Monitoring tools (ELK, Kibana, Grafana, Prometheus) and many other technologies. I also have
+                  a great interest in AI and IoT.
                 </div>
                 
                 <div className="AboutPage-headline">
-                  This Webpage has been created in a couple of days for the purpose of presenting
+                  This Website has been created in a couple of days for the purpose of presenting
                   some of the way I work with <b>ReactJS</b> on front-end, <b>NodeJS</b> on back-end using
                   <b>Koa</b> as server with <b>MongoDB</b> as database. The code is public made on my github account.
                   The web application is hosted using {this.renderLink('https://zeit.co/', 'Now')},
